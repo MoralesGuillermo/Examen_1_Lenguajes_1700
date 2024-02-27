@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TipoAsientoController;
 use App\Http\Controllers\VuelosController;
+use App\Http\Controllers\VuelosAsientosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,15 @@ Route::get('/agregarVuelos', [VuelosController::class, 'agregar'])->name('aeroli
 Route::get('/createFlight', [VuelosController::class, 'create'])->name('aerolinea.createFlight');
 
 Route::get('/eliminarVuelo/{numeroVuelo}', [VuelosController::class, 'eliminar'])->name('aerolinea.eliminarVuelo');
+
+Route::get('/editarVuelo/{numeroVuelo}', [VuelosController::class, 'editar'])->name('aerolinea.editarVuelo');
+
+Route::get('/editFlight', [VuelosController::class, 'update'])->name('aerolinea.editFlight');
+
+Route::get('/agregarAsiento/{numeroVuelo}/{fechaSalida}', [VuelosAsientosController::class, 'agregar'])->name('aerolinea.agregar');
+
+
+
 
 
 

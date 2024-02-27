@@ -14,22 +14,22 @@
             <div class="col-md-6">
                 <h2>Editar Vuelo</h2>
                 <br>
-                <form >
+                <form action="{{route('aerolinea.editFlight')}}" method="PUT">
                     <div class="form-group">
                         <label for="color">Numero:</label>
-                        <input type="text" class="form-control" readonly/>
+                        <input type="text" class="form-control" readonly name="numeroVuelo" value="{{$vuelo->numeroVuelo}}"/>
                     </div>
                     <div class="form-group">
                         <label for="metros">Origen</label>
-                        <input type="text"class="form-control"/>
+                        <input type="text"class="form-control" name="origen" value="{{$vuelo->origen}}"/>
                     </div>
                     <div class="form-group">
                         <label for="tipoPropiedad">Destino:</label>
-                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control" name="destino" value="{{$vuelo->destino}}"/>
                     </div>
                     <br>
                     <div class="form-group">
-                        <a class="btn btn-warning">Volver</a>
+                        <a class="btn btn-warning" href={{route('aerolinea.vuelos')}}>Volver</a>
                         <button type="submit" class="btn btn-success">Guardar</button>
                     </div>
                 </form>

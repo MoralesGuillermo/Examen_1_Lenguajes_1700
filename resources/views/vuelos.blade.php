@@ -31,13 +31,13 @@
                     <td>{{$vuelo->destino}}</td>
                     <td>{{$vuelo->numeroAsientos}}</td>
                     <td>
-                        <a href="{{route('aerolinea.eliminarVuelo', $vuelo->numeroVuelo)}}">Editar</a>
+                        <a href="{{route('aerolinea.editarVuelo', $vuelo->numeroVuelo)}}">Editar</a>
                     </td>
                     <td>
                         <a href="{{route('aerolinea.eliminarVuelo', $vuelo->numeroVuelo)}}"">Eliminar</a>
                     </td>
                     <td>
-                        <a>Agregar Asiento</a>
+                        <a href="{{route('aerolinea.agregar', [$vuelo->numeroVuelo, $vuelo->fecha_de_salida])}}">Agregar Asiento</a>
                     </td>
                     <td>
                         <a>Ver Asientos</a>

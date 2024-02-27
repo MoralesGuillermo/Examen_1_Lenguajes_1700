@@ -16,12 +16,12 @@
                 <br>
                 <div class="form-group">
                     <label for="metros">N&uacute;mero Vuelo</label>
-                    <input type="text"class="form-control" value = "CM385" readonly/>
+                    <input type="text"class="form-control" value ="{{$numeroVuelo}}" readonly/>
                 </div>
 
                 <div class="form-group">
                     <label for="metros">Fecha Vuelo</label>
-                    <input type="date"class="form-control" readonly/>
+                    <input type="date"class="form-control" value= {{$fecha}}readonly/>
                 </div>
 
 

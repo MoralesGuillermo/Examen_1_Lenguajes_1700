@@ -37,6 +37,18 @@ class VuelosController extends Controller
             }
         }
         return redirect("/vuelos");
+    }
 
+    public function editar($numeroVuelo){
+        $vuelo = Vuelo::find($numeroVuelo);
+        return view('editarVuelo', compact('vuelo'));
+    }
+
+    public function update(Request $request){ 
+        $vuelo = Vuelo::find($request->numeroVuelo);
+        $vuelo->origen = $request->origen;
+        $vuelo->destino = $request->destino;
+        $vuelo->save();
+        return redirect('/vuelos');
     }
 }

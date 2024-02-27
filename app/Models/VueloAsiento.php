@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class VueloAsiento extends Model
 {
     use HasFactory;
+    public $table = "vuelos_asientos";
 }

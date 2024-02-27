@@ -12,5 +12,7 @@ class Vuelo extends Model
     public $table = 'vuelos';
     public $timestamps = false;
 
-    public $primaryKey = 'numeroVuelo';
+    protected $primaryKey = 'numeroVuelo';
+
+    public $incrementing = false;
 }
